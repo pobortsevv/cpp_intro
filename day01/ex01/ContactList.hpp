@@ -13,10 +13,11 @@
  *
  * ===================================================================
  */
+
 #ifndef CONTACTLIST_H
 # define CONTACTLIST_H
 
-# include <Contact.hpp>
+# include "Contact.hpp"
 
 class ContactList
 {

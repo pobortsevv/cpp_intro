@@ -26,12 +26,112 @@ void Contact::setIndex(int _index)
 	this->index = _index;
 }
 
-std::string getFirst(void)
+std::string Contact::getFirst(void)
+{
+	return (this->first_name);
+}
+
+void Contact::setFirst(std::string _first)
+{
+	this->first_name = _first;
+}
+
+std::string Contact::getLast(void)
 {
 	return (this->last_name);
 }
 
-void setFirst(std::string _first)
+void Contact::setLast(std::string _last)
 {
-	this->first_name = _first;
+	this->last_name = _last;
+}
+
+std::string Contact::getNickname(void)
+{
+	return (this->nickname);
+}
+
+void Contact::setNickname(std::string _nickname)
+{
+	this->nickname = _nickname;
+}
+
+std::string Contact::getLogin(void)
+{
+	return (this->login);
+}
+
+void Contact::setLogin(std::string _login)
+{
+	this->login = _login;
+}
+
+std::string Contact::getPostal(void)
+{
+	return (this->postal_address);
+}
+
+void Contact::setPostal(std::string _postal)
+{
+	this->postal_address = _postal;
+}
+
+std::string Contact::getEmail(void)
+{
+	return (this->email_address);
+}
+
+void Contact::setEmail(std::string _email)
+{
+	this->email_address = _email;
+}
+
+std::string Contact::getPhone(void)
+{
+	return (this->phone_number);
+}
+
+void Contact::setPhone(std::string _phone)
+{
+	this->phone_number = _phone;
+}
+
+std::string Contact::getBirthday(void)
+{
+	return (this->birthday_date);
+}
+
+void Contact::setBirthday(std::string _birthday)
+{
+	this->birthday_date = _birthday;
+}
+
+std::string Contact::getMeal(void)
+{
+	return (this->favorite_meal);
+}
+
+void Contact::setMeal(std::string _meal)
+{
+	this->favorite_meal = _meal;
+}
+
+std::string Contact::getUnderwear(void)
+{
+	return (this->underwear_color);
+}
+
+void Contact::setUnderwear(std::string _underwear)
+{
+	this->underwear_color = _underwear;
+}
+
+std::string Contact::getSecret(void)
+{
+	return (this->darkest_secret);
+}
+
+void Contact::setSecret(std::string _secret)
+{
+	this->darkest_secret = _secret;
 }

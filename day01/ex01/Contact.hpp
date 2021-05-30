@@ -21,6 +21,9 @@
 
 class Contact
 {
+	/*-----------------------------------------------------------------------------
+	 * private fields of our main class - contact 
+	 *-----------------------------------------------------------------------------*/
 	private:
 		int index;
 		std::string first_name;
@@ -35,6 +38,9 @@ class Contact
 		std::string underwear_color;
 		std::string darkest_secret;
 
+		/*-----------------------------------------------------------------------------
+		 * get, set methods that used as interface for our fields
+		 *-----------------------------------------------------------------------------*/
 	public:
 		int getIndex(void);
 		void setIndex(int _index);	
@@ -73,4 +79,4 @@ class Contact
 		void setSecret(std::string _secret);	
 };
 
-#endif CONTACT_H
+#endif
