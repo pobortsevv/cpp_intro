@@ -35,14 +35,16 @@ int main(int ac, char **av)
 	std::string command;
 	ContactList book;
 
+	std::cout << std::setw(50) << "\033[1;32mWelcome to Phonebook!\n \033[0m";
 	while (1)
 	{
-		/*-----------------------------------------------------------------------------
-		 * Program gets one of three commands, get it in toupper and calls methods of
-		 * book object.
-		 *-----------------------------------------------------------------------------*/
-		std::cout << "\n\nEnter command: ADD, SEARCH or EXIT" << std::endl;
-		std::cin >> command;
+		std::cout << "\nEnter command: ADD, SEARCH or EXIT" << std::endl;
+		getline(std::cin, command);
+		/*-----------------------------
+		 * We check for eof in getline
+		 *-----------------------------*/
+		if (std::cin.eof() != 0)
+			exit (0);
 		command = string_toupper(command);
 		if (command == "ADD")
 		{
@@ -55,9 +57,7 @@ int main(int ac, char **av)
 			}
 		}
 		else if (command == "SEARCH")
-		{
-			/* book.Search(); */
-		}
+			book.Search(count);
 		else if (command == "EXIT")
 			return (0);
 		else

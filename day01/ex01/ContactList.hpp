@@ -23,10 +23,11 @@ class ContactList
 {
 	private:
 		Contact book[8];
+		void ShowSearchPromt(int count);
 
 	public:
 		void Add(int index);
-		void Search(std::string name);
+		void Search(int count);
 };
 
 #endif

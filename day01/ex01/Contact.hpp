@@ -18,6 +18,7 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 
 class Contact
 {
@@ -77,6 +78,8 @@ class Contact
 
 		std::string getSecret(void);
 		void setSecret(std::string _secret);	
+
+		void ShowInfo(void);
 };
 
 #endif

@@ -16,6 +16,22 @@
 
 #include "Contact.hpp"
 
+void Contact::ShowInfo(void)
+{
+	std::cout << std::setw(40) << "Contact Info\n" << std::endl;
+	std::cout << "• First Name		: " << this->first_name << std::endl;	
+	std::cout << "• Last Name		: " << this->last_name << std::endl;	
+	std::cout << "• Nicname    		: " << this->nickname << std::endl;	
+	std::cout << "• Login			: " << this->login << std::endl;	
+	std::cout << "• Postal Address	: " << this->postal_address << std::endl;	
+	std::cout << "• Email Address 	: " << this->email_address << std::endl;	
+	std::cout << "• Phone Number 		: " << this->phone_number << std::endl;	
+	std::cout << "• Birthday Date 	: " << this->birthday_date << std::endl;	
+	std::cout << "• Favorite Meal 	: " << this->favorite_meal << std::endl;	
+	std::cout << "• Underwear Color	: " << this->underwear_color << std::endl;	
+	std::cout << "• Darkest Secret	: " << this->darkest_secret << std::endl;	
+}
+
 int	Contact::getIndex(void)
 {
 	return (this->index);
