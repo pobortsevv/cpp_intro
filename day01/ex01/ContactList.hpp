@@ -23,11 +23,11 @@ class ContactList
 {
 	private:
 		Contact book[8];
-		void ShowSearchPromt(int count);
+		void ShowSearchPromt(int count) const;
 
 	public:
 		void Add(int index);
-		void Search(int count);
+		void Search(int count) const;
 };
 
 #endif

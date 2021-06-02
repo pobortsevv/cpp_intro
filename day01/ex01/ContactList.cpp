@@ -63,7 +63,7 @@ void ContactList::Add(int index)
 	this->book[index] = new_c;
 }
 
-void ContactList::ShowSearchPromt(int count)
+void ContactList::ShowSearchPromt(int count) const
 {
 	int i = 0;
 
@@ -110,7 +110,7 @@ void ContactList::ShowSearchPromt(int count)
 	}
 }
 
-void ContactList::Search(int count)
+void ContactList::Search(int count) const
 {
 	std::string choice;
 	int number;

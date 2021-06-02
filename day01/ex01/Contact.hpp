@@ -43,43 +43,43 @@ class Contact
 		 * get, set methods that used as interface for our fields
 		 *-----------------------------------------------------------------------------*/
 	public:
-		int getIndex(void);
+		int getIndex(void) const;
 		void setIndex(int _index);	
 
-		std::string getFirst(void);
+		std::string getFirst(void) const;
 		void setFirst(std::string _first);
 		
-		std::string getLast(void);
+		std::string getLast(void) const;
 		void setLast(std::string _last);
 
-		std::string getNickname(void);
+		std::string getNickname(void) const;
 		void setNickname(std::string _nickname);	
 
-		std::string getLogin(void);
+		std::string getLogin(void) const;
 		void setLogin(std::string _login);
 
-		std::string getPostal(void);
+		std::string getPostal(void) const;
 		void setPostal(std::string _postal);	
 
-		std::string getEmail(void);
+		std::string getEmail(void) const;
 		void setEmail(std::string _email);	
 
-		std::string getPhone(void);
+		std::string getPhone(void) const;
 		void setPhone(std::string _phone);	
 
-		std::string getBirthday(void);
+		std::string getBirthday(void) const;
 		void setBirthday(std::string _birthday);	
 
-		std::string getMeal(void);
+		std::string getMeal(void) const;
 		void setMeal(std::string _meal);
 
-		std::string getUnderwear(void);
+		std::string getUnderwear(void) const;
 		void setUnderwear(std::string _underwear);	
 
-		std::string getSecret(void);
+		std::string getSecret(void) const;
 		void setSecret(std::string _secret);	
 
-		void ShowInfo(void);
+		void ShowInfo(void) const;
 };
 
 #endif
