@@ -18,10 +18,14 @@
 
 int main(void)
 {
-	std::string str = "HI THIS IS BRAIN";
+	std::string const str = "HI THIS IS BRAIN";
 
-	std::string *ptr = &str;
-	std::string &ref = str;
+	/*-----------------------------------------------------------------------------
+	 * the most simple explanation of reference: Reference is an alias for another 
+	 * variable or constant
+	 *-----------------------------------------------------------------------------*/
+	std::string const *ptr = &str;
+	std::string const &ref = str;
 
 	std::cout << "Pointer output: " << *ptr << std::endl;
 	std::cout << std::endl;
