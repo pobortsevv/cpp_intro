@@ -19,27 +19,23 @@ void	ZombieEvent::setZombieType(std::string _type)
 	this->type_choice = _type;
 }
 
-Zombie *Zombie::newZombie(std::string name)
+Zombie *ZombieEvent::newZombie(std::string name)
 {
 	Zombie *zombie;
-	if (!this->name)
-		zombie = new Zombie(name, "");
-	else
-		zombie = new Zombie(name, this->choice_type);
+	zombie = new Zombie(name, this->type_choice);
 	return (zombie);
 }
 
-Zombie	Zombie::randomChump(void)
+Zombie	ZombieEvent::randomChump(void)
 {
 	static const std::string names[10] = { "Oleg", "Vitya", "Eduard", "Victoria",
                           "Vanya", "Ann", "Kirill", "Alex",
                           "Blum", "Kent" };
 	int index;
-	Zombie rand_zombie;
 
 	srand(time(0));
 	index = rand() % 10;
-	rand_zombie(names[index], this->type_choice);
-	rand_zombie.announce();
+	Zombie rand_Zombie(names[index], this->type_choice);
+	rand_Zombie.announce();
 	return (rand_Zombie);
 }

@@ -26,11 +26,6 @@ Zombie::~Zombie(void)
 	std::cout << this->name << " died\n";
 }
 
-void	Zombie::setZombieType(std::string _type)
-{
-	this->type = _type;
-}
-
 void	Zombie::announce(void)
 {
 	std::cout << "<" << this->name << " (" << this->type << ")> Braiiiiiiinnnssss...\n";
