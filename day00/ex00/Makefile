@@ -1,7 +1,6 @@
-NAME 	= pony_Alloc
+NAME 	= megaphone
 
-SRCS	= ./main.cpp \
-		  ./Pony.cpp \
+SRCS	= ./megaphone.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
@@ -9,15 +8,16 @@ CC 		= clang++
 RM		= rm -rf
 CFLAGS	= -Wall -Werror -Wextra -g
 
+
 all:
 	@$(MAKE) $(NAME) -j4
 
 %.o:    %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(NAME):	$(OBJS)
 	@$(CC) $(OBJS) -o $(NAME)
-	@echo pony_Alloc compiled!
+	@echo megaphone compiled!
 
 clean:
 	@$(RM) $(OBJS)
@@ -25,6 +25,6 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo pony_Alloc removed!
+	@echo megaphone removed!
 
 re:	fclean $(NAME)
