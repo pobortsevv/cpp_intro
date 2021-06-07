@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  FragTrap.cpp
+ *       Filename:  ScavTrap.cpp
  *
  *    Description: methods of parent class 
  *
@@ -14,41 +14,43 @@
  * ===================================================================
  */
 
-#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-FragTrap::FragTrap(void)
+ScavTrap::ScavTrap(void)
 {
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
-	this->_energyPoints = 100;
+	this->_energyPoints = 50;
 	this->_lvl = 1;
 	this->_name = "noname";
-	this->_meleeAttackDamage = 30;
-	this->_rangeAttackDamage = 20;
-	this->_armorDamageReduction = 5;
-	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
+	this->_meleeAttackDamage = 20;
+	this->_rangeAttackDamage = 15;
+	this->_armorDamageReduction = 3;
+	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : _name(name)
+ScavTrap::ScavTrap(std::string name) : _name(name)
 {
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
-	this->_energyPoints = 100;
+	this->_energyPoints = 50;
 	this->_lvl = 1;
-	this->_meleeAttackDamage = 30;
-	this->_rangeAttackDamage = 20;
+	this->_meleeAttackDamage = 20;
+	this->_rangeAttackDamage = 15;
+	this->_armorDamageReduction = 3;
 	this->_armorDamageReduction = 5;
-	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
+	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
 }
 
-FragTrap::~FragTrap(void)
+ScavTrap::~ScavTrap(void)
 {
-	std::cout << this->_name << " <FragTrap> died by destructor!" << std::endl;
+	std::cout << this->_name << " <ScavTrap> died by destructor!" << std::endl;
 }
 
-FragTrap & FragTrap::operator=(FragTrap const & obj)
+
+ScavTrap & ScavTrap::operator=(ScavTrap const & obj)
 {
-	std::cout << "Assignation operator for FragTrap called" << std::endl;
+	std::cout << "Assignation operator for ScavTrap called" << std::endl;
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
@@ -60,21 +62,21 @@ FragTrap & FragTrap::operator=(FragTrap const & obj)
 	return (*this);
 }
 
-void	FragTrap::rangedAttack(std::string const & target)
+void	ScavTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP: " << this->_name << " attacks ";
+	std::cout << "SC4V-TP: " << this->_name << " attacks ";
 	std::cout << target << " at range, causing " << this->_rangeAttackDamage;
 	std::cout << " points of damage!" << std::endl;
 }
 
-void	FragTrap::meleeAttack(std::string const & target)
+void	ScavTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP: " << this->_name << " attacks ";
+	std::cout << "SC4V-TP: " << this->_name << " attacks ";
 	std::cout << target << " at melee, causing " << this->_meleeAttackDamage;
 	std::cout << " points of damage!" << std::endl;
 }
 
-void	FragTrap::takeDamage(unsigned int amount)
+void	ScavTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hitPoints - amount <= 0)
 	{
@@ -90,7 +92,7 @@ void	FragTrap::takeDamage(unsigned int amount)
 	}
 }
 
-void	FragTrap::beRepaired(unsigned int amount)
+void	ScavTrap::beRepaired(unsigned int amount)
 {
 	if (this->_hitPoints + amount >= this->_maxHitPoints)
 	{
@@ -105,29 +107,29 @@ void	FragTrap::beRepaired(unsigned int amount)
 	}
 }
 
-void	FragTrap::doFlip(std::string const & target)
+void	ScavTrap::writePoem(std::string const & target)
 {
-	std::cout << this->_name << " did a triple flip in front of ";
-	std::cout << target << ". Wow that's was amazing!" << std::endl;
+	std::cout << this->_name << " wrote a poem for ";
+	std::cout << target << ". Man, that was fantastic!" << std::endl;
 }
 
-void	FragTrap::makeMacaroni(std::string const & target)
+void	ScavTrap::talkDirt(std::string const & target)
 {
-	std::cout << this->_name << " made and served macaroni with the chicken strips for ";
-	std::cout << target << ". Mmmm so good and tasty!" << std::endl;
+	std::cout << this->_name << " just screamed at ";
+	std::cout << target << " with dirty words! OMG thats awful" << std::endl;
 }
 
-typedef void (FragTrap::*arrFunc)(std::string const & target);
+typedef void (ScavTrap::*arrFunc)(std::string const & target);
 
-void	FragTrap::vaulthunter_dot_exe(std::string const & target)
+void	ScavTrap::challengeNewcomer(std::string const & target)
 {
 	if (this->_energyPoints < 25)
 		std::cout << this->_name << " doesn't have enough energy points to execute vaulthunter :(" << std::endl;
 	else
 	{
 		arrFunc funcs[4] = {
-			&FragTrap::rangedAttack, &FragTrap::meleeAttack,
-			&FragTrap::doFlip, &FragTrap::makeMacaroni
+			&ScavTrap::rangedAttack, &ScavTrap::meleeAttack,
+			&ScavTrap::writePoem, &ScavTrap::talkDirt
 		};
 
 		std::srand(std::time(nullptr));
