@@ -23,7 +23,7 @@
 # include <ctime>
 # include <cstdlib>
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	private:
 		void makeMacaroni(std::string const & target) const;
@@ -31,7 +31,7 @@ class FragTrap : public ClapTrap
 
 	public:
 		FragTrap(void);
-		FragTrap(std::string name);
+		FragTrap(std::string const& name);
 		~FragTrap(void);
 		FragTrap & operator=(FragTrap const & obj);
 

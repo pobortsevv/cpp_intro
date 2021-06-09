@@ -24,12 +24,12 @@ SuperTrap::SuperTrap(void) : ClapTrap("noname"), FragTrap(), NinjaTrap()
 	this->_maxEnergyPoints = this->NinjaTrap::getMaxEnergyPoints();
 	this->_lvl = this->NinjaTrap::getLvl();
 	this->_meleeAttackDamage = this->NinjaTrap::getMelee();
-	this->_rangedAttackDamage = this->FragTrap::getRange();
+	this->_rangeAttackDamage = this->FragTrap::getRange();
 	this->_armorDamageReduction = this->FragTrap::getArmor();
 	std::cout << this->_name << " <SuperTrap> was born!" << std::endl;
 }
 
-SuperTrap::SuperTrap(std::string name) : ClapTrap(name), FragTrap(), NinjaTrap()
+SuperTrap::SuperTrap(std::string const& name) : ClapTrap(name), FragTrap(), NinjaTrap()
 {
 	this->_hitPoints = this->FragTrap::getHP();
 	this->_maxHitPoints = this->FragTrap::getMaxHP();
@@ -37,7 +37,7 @@ SuperTrap::SuperTrap(std::string name) : ClapTrap(name), FragTrap(), NinjaTrap()
 	this->_maxEnergyPoints = this->NinjaTrap::getMaxEnergyPoints();
 	this->_lvl = this->NinjaTrap::getLvl();
 	this->_meleeAttackDamage = this->NinjaTrap::getMelee();
-	this->_rangedAttackDamage = this->FragTrap::getRange();
+	this->_rangeAttackDamage = this->FragTrap::getRange();
 	this->_armorDamageReduction = this->FragTrap::getArmor();
 	std::cout << this->_name << " <SuperTrap> was born!" << std::endl;
 }
@@ -53,6 +53,7 @@ SuperTrap & SuperTrap::operator=(SuperTrap const & obj)
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
 	this->_lvl = obj._lvl;
 	this->_name = obj._name;
 	this->_meleeAttackDamage = obj._meleeAttackDamage;

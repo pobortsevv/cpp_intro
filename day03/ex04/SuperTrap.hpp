@@ -23,9 +23,20 @@
 
 class SuperTrap : virtual public FragTrap, virtual public NinjaTrap
 {
+	private:
+		int _hitPoints;
+		int _maxHitPoints;
+		int _energyPoints;
+		int _maxEnergyPoints;
+		int _lvl;
+		std::string _name;
+		int _meleeAttackDamage;
+		int _rangeAttackDamage;
+		int _armorDamageReduction;
+
 	public:
 		SuperTrap(void);
-		SuperTrap(std::string name);
+		SuperTrap(std::string const& name);
 		~SuperTrap(void);
 		SuperTrap & operator=(SuperTrap const & obj);
 		

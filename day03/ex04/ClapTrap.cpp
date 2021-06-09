@@ -21,6 +21,7 @@ ClapTrap::ClapTrap(void)
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 100;
+	this->_maxEnergyPoints = 100;
 	this->_lvl = 1;
 	this->_name = "noname";
 	this->_meleeAttackDamage = 30;
@@ -29,11 +30,12 @@ ClapTrap::ClapTrap(void)
 	std::cout << this->_name << " <ClapTrap> was born!" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name)
+ClapTrap::ClapTrap(std::string const& name) : _name(name)
 {
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 100;
+	this->_maxEnergyPoints = 100;
 	this->_lvl = 1;
 	this->_meleeAttackDamage = 30;
 	this->_rangeAttackDamage = 20;
@@ -41,12 +43,13 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
 	std::cout << this->_name << " <ClapTrap> was born!" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name, int hitPoints, int maxHitPoints, int energyPoints, int lvl,
+ClapTrap::ClapTrap(std::string const& name, int hitPoints, int maxHitPoints, int energyPoints, int maxEnergyPoints, int lvl,
 				 int meleeAttackDamage, int rangeAttackDamage, int armorDamageReduction)
 {
 	this->_hitPoints = hitPoints;
 	this->_maxHitPoints = maxHitPoints;
 	this->_energyPoints = energyPoints;
+	this->_maxEnergyPoints = maxEnergyPoints;
 	this->_lvl = lvl;
 	this->_name = name;
 	this->_meleeAttackDamage = meleeAttackDamage;
@@ -106,6 +109,7 @@ ClapTrap & ClapTrap::operator=(ClapTrap const & obj)
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
 	this->_lvl = obj._lvl;
 	this->_name = obj._name;
 	this->_meleeAttackDamage = obj._meleeAttackDamage;

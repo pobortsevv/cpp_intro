@@ -25,7 +25,7 @@
 # include <ctime>
 # include <cstdlib>
 
-class NinjaTrap : public ClapTrap
+class NinjaTrap : virtual public ClapTrap
 {
 	private:
 		void makeMacaroni(std::string const & target);
@@ -33,7 +33,7 @@ class NinjaTrap : public ClapTrap
 
 	public:
 		NinjaTrap(void);
-		NinjaTrap(std::string name);
+		NinjaTrap(std::string const& name);
 		~NinjaTrap(void);
 		NinjaTrap & operator=(NinjaTrap const & obj);
 

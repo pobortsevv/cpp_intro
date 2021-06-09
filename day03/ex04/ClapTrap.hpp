@@ -27,6 +27,7 @@ class ClapTrap
 		int _hitPoints;
 		int _maxHitPoints;
 		int _energyPoints;
+		int _maxEnergyPoints;
 		int _lvl;
 		std::string _name;
 		int _meleeAttackDamage;
@@ -44,8 +45,8 @@ class ClapTrap
 
 	public:
 		ClapTrap(void);
-		ClapTrap(std::string name);
-		ClapTrap(std::string name, int hitPoints, int maxHitPoint, int energyPoints, int lvl,
+		ClapTrap(std::string const& name);
+		ClapTrap(std::string const& name, int hitPoints, int maxHitPoint, int energyPoints, int maxEnergyPoints, int lvl,
 				int meleeAttackDamage,
 				int rangeAttackDamage,
 				int armorDamageReduction);

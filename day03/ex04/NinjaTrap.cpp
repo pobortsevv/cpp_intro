@@ -16,12 +16,12 @@
 
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap(void) : ClapTrap("noname", 60, 60, 120, 1, 60, 5, 0)
+NinjaTrap::NinjaTrap(void) : ClapTrap("noname", 60, 60, 120, 120, 1, 60, 5, 0)
 {
 	std::cout << this->_name << " <NinjaTrap> was born!" << std::endl;
 }
 
-NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name, 60, 60, 120, 1, 60, 5, 0)
+NinjaTrap::NinjaTrap(std::string const& name) : ClapTrap(name, 60, 60, 120, 120, 1, 60, 5, 0)
 {
 	std::cout << this->_name << " <NinjaTrap> was born!" << std::endl;
 }
@@ -37,6 +37,7 @@ NinjaTrap & NinjaTrap::operator=(NinjaTrap const & obj)
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
 	this->_lvl = obj._lvl;
 	this->_name = obj._name;
 	this->_meleeAttackDamage = obj._meleeAttackDamage;

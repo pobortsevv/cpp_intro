@@ -16,12 +16,12 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap("noname", 100, 100, 50, 1, 20, 15, 3)
+ScavTrap::ScavTrap(void) : ClapTrap("noname", 100, 100, 50, 50, 1, 20, 15, 3)
 {
 	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 100, 50, 1, 20, 15, 3)
+ScavTrap::ScavTrap(std::string const& name) : ClapTrap(name, 100, 100, 50, 50, 1, 20, 15, 3)
 {
 	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
 }
@@ -37,6 +37,7 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & obj)
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
 	this->_lvl = obj._lvl;
 	this->_name = obj._name;
 	this->_meleeAttackDamage = obj._meleeAttackDamage;
