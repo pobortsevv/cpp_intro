@@ -15,22 +15,16 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 #include <unistd.h>
 
 int main(void)
 {
 	int i = 5;
-	FragTrap frag1("Mario");
-	ScavTrap scav2("Serena");
-	NinjaTrap ninja("Donatello");
-	ClapTrap clap;
-	ScavTrap scav3;
+	SuperTrap super1("Shreder");
 
-	scav3 = scav2;
-
-	ninja.ninjaShoebox(frag1);
-	ninja.ninjaShoebox(scav3);
-	ninja.ninjaShoebox(clap);
-
+	super1.meleeAttack("Raphael");
+	super1.rangedAttack("Leonardo");
+	super1.vaulthunter_dot_exe("Splinter");
 	return (0);
 }

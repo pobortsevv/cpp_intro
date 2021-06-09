@@ -66,13 +66,12 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 		std::cout << this->_name << " doesn't have enough energy points to execute vaulthunter :(" << std::endl;
 	else
 	{
-		arrFunc funcs[4] = {
-			&FragTrap::rangedAttack, &FragTrap::meleeAttack,
+		arrFunc funcs[2] = {
 			&FragTrap::doFlip, &FragTrap::makeMacaroni
 		};
 
 		std::srand(std::time(nullptr));
-		(this->*funcs[std::rand() % 4])(target);
+		(this->*funcs[std::rand() % 2])(target);
 		this->_energyPoints -= 25;
 	}
 }

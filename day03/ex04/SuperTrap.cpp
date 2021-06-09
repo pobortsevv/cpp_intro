@@ -22,6 +22,7 @@ SuperTrap::SuperTrap(void) : ClapTrap("noname"), FragTrap(), NinjaTrap()
 	this->_maxHitPoints = this->FragTrap::getMaxHP();
 	this->_energyPoints = this->NinjaTrap::getEnergyPoints();
 	this->_maxEnergyPoints = this->NinjaTrap::getMaxEnergyPoints();
+	this->_name = "noname";
 	this->_lvl = this->NinjaTrap::getLvl();
 	this->_meleeAttackDamage = this->NinjaTrap::getMelee();
 	this->_rangeAttackDamage = this->FragTrap::getRange();
@@ -35,6 +36,7 @@ SuperTrap::SuperTrap(std::string const& name) : ClapTrap(name), FragTrap(), Ninj
 	this->_maxHitPoints = this->FragTrap::getMaxHP();
 	this->_energyPoints = this->NinjaTrap::getEnergyPoints();
 	this->_maxEnergyPoints = this->NinjaTrap::getMaxEnergyPoints();
+	this->_name = name;
 	this->_lvl = this->NinjaTrap::getLvl();
 	this->_meleeAttackDamage = this->NinjaTrap::getMelee();
 	this->_rangeAttackDamage = this->FragTrap::getRange();
