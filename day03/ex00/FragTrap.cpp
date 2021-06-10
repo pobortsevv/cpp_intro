@@ -76,7 +76,7 @@ void	FragTrap::meleeAttack(std::string const & target)
 
 void	FragTrap::takeDamage(unsigned int amount)
 {
-	if (this->_hitPoints - amount <= 0)
+	if (this->_hitPoints - (int)amount <= 0)
 	{
 		std::cout << this->_name << " died!" << std::endl;
 		this->_hitPoints = 0;
@@ -86,13 +86,13 @@ void	FragTrap::takeDamage(unsigned int amount)
 		std::cout << this->_name << " got " << amount << " damage!";
 		std::cout << std::endl;
 		if (amount - this->_armorDamageReduction > 0)
-			this->_hitPoints -= (amount - this->_armorDamageReduction);
+			this->_hitPoints -= ((int)amount - this->_armorDamageReduction);
 	}
 }
 
 void	FragTrap::beRepaired(unsigned int amount)
 {
-	if (this->_hitPoints + amount >= this->_maxHitPoints)
+	if (this->_hitPoints + (int)amount >= this->_maxHitPoints)
 	{
 		this->_hitPoints = this->_maxHitPoints;
 		std::cout << this->_name << " is fully repaired!" << std::endl;

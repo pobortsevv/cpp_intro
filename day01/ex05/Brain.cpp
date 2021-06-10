@@ -16,10 +16,9 @@
 
 std::string Brain::identify(void)
 {
-	std::string address;
-	char buff[32];
+	std::stringstream buf;
 
-	std::sprintf(buff, "%p", this);
-	address = buff;
-	return (address);
+	buf << this;
+	this->_address = buf.str();
+	return (this->_address);
 }

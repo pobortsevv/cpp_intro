@@ -13,7 +13,7 @@ CFLAGS	= -Wall -Werror -Wextra -g -std=c++98
 all:
 	@$(MAKE) $(NAME) -j4
 
-%.o:    %.c
+%.o:    %.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS)

@@ -96,7 +96,7 @@ void	ScavTrap::takeDamage(unsigned int amount)
 
 void	ScavTrap::beRepaired(unsigned int amount)
 {
-	if (this->_hitPoints + amount >= this->_maxHitPoints)
+	if (this->_hitPoints + (int)amount >= this->_maxHitPoints)
 	{
 		this->_hitPoints = this->_maxHitPoints;
 		std::cout << this->_name << " is fully repaired!" << std::endl;

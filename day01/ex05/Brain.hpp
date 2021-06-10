@@ -16,13 +16,17 @@
 # define BRAIN_HPP
 
 # include <iostream>
+# include <sstream>
 # include <stdio.h>
 # include <stdlib.h>
 
 class Brain
 {
+	private:
+		std::string _address;
+
 	public:
-		std::string identify(void);
+		std::string  identify(void);
 };
 
 #endif

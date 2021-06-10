@@ -21,8 +21,9 @@ class Human
 {
 	private:
 		Brain _brain;
+
 	public:
-		Brain getBrain(void);
+		Brain & getBrain(void);
 		std::string identify(void);
 };
 

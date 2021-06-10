@@ -14,7 +14,7 @@
 
 #include "Human.hpp"
 
-Brain Human::getBrain(void)
+Brain & Human::getBrain(void)
 {
 	return (this->_brain);
 }
