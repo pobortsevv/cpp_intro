@@ -16,12 +16,12 @@
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap("noname", 100, 100, 100, 1, 30, 20, 5)
+FragTrap::FragTrap(void) : ClapTrap("noname", 100, 100, 100, 100, 1, 30, 20, 5)
 {
 	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 100, 1, 30, 20, 5)
+FragTrap::FragTrap(std::string const& name) : ClapTrap(name, 100, 100, 100, 100, 1, 30, 20, 5)
 {
 	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
 }
