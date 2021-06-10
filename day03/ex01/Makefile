@@ -8,7 +8,7 @@ OBJS 	= $(SRCS:.cpp=.o)
 
 CC 		= clang++
 RM		= rm -rf
-CFLAGS	= -Wall -Werror -Wextra -g
+CFLAGS	= -Wall -Werror -Wextra -g -std=c++98
 
 all:
 	@$(MAKE) $(NAME) -j4

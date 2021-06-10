@@ -25,7 +25,6 @@ int main(void)
 	Zombie feet_enjoyer("Rostislav", "Feet Enjoyer");
 	ZombieEvent event;
 	Zombie *boss;
-	int i = -1;
 
 	std::cout << "Zombie on heap created\nAHH he is eating my brain!!!\n\n";
 	brain_eater->announce();

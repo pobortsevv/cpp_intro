@@ -29,7 +29,7 @@ std::string string_toupper(std::string str)
 	return (str);
 }
 
-int main(int ac, char **av)
+int main(void)
 {
 	int 		count = 0;
 	std::string command;

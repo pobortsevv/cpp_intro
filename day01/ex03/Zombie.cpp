@@ -22,7 +22,7 @@ Zombie::Zombie(void)
 	this->type = "";
 }
 
-Zombie::Zombie(std::string _name, std::string _type) : name(_name), type(_type)
+Zombie::Zombie(std::string _name, std::string _type) : type(_type), name(_name)
 {
 	std::cout << this->name << " was born\n";
 }
