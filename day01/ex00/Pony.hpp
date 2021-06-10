@@ -24,9 +24,11 @@ class Pony
 	private:
 		std::string name;
 		std::string color;
+
 	public:
 		Pony(std::string _name, std::string _color);
 		~Pony(void);
+
 		void ponyTalk(std::string phrase) const;
 };
 

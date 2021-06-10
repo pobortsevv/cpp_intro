@@ -31,7 +31,7 @@ void ponyOnTheHeap(void)
 int main(void)
 {
 	ponyOnTheHeap();
-	std::cout << "\n";
+	std::cout << std::endl;
 	ponyOnTheStack();
 	return (0);
 }

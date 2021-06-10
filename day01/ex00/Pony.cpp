@@ -36,6 +36,6 @@ void Pony::ponyTalk(std::string phrase) const
 {
 	std::cout << "Hi! My name is " << this->name << std::endl;
 	std::cout << "I was born as " << this->color << " pony" << std::endl;
-	std::cout << "\nMy cathphrase: " << std::endl;
+	std::cout << "\nMy catchphrase: " << std::endl;
 	std::cout << phrase << std::endl;
 }

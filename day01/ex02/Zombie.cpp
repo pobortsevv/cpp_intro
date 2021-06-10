@@ -26,7 +26,7 @@ Zombie::~Zombie(void)
 	std::cout << this->name << " died\n";
 }
 
-void	Zombie::announce(void)
+void	Zombie::announce(void) const
 {
 	std::cout << "<" << this->name << " (" << this->type << ")> Braiiiiiiinnnssss...\n";
 }

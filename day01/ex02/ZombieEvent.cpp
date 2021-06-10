@@ -26,7 +26,7 @@ Zombie *ZombieEvent::newZombie(std::string name)
 	return (zombie);
 }
 
-Zombie	ZombieEvent::randomChump(void)
+Zombie	ZombieEvent::randomChump(void) const
 {
 	static const std::string names[10] = { "Oleg", "Vitya", "Eduard", "Victoria",
                           "Vanya", "Ann", "Kirill", "Alex",

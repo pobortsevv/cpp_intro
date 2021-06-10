@@ -29,7 +29,7 @@ int main(void)
 
 	std::cout << "Zombie on heap created\nAHH he is eating my brain!!!\n\n";
 	brain_eater->announce();
-	std::cout << "Another scientist made a zombie on a stack\n\n";
+	std::cout << "\nAnother scientist made a zombie on a stack\n" << std::endl;
 	feet_enjoyer.announce();
 	std::cout <<"It ate his right foot...\n\n";
 	std::cout << "Oh no, they broke out of the lab!!!\n\n";
