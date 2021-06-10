@@ -28,6 +28,7 @@ class FragTrap
 		int _hitPoints;
 		int _maxHitPoints;
 		int _energyPoints;
+		int _maxEnergyPoints;
 		int _lvl;
 		std::string _name;
 		int _meleeAttackDamage;
@@ -39,7 +40,7 @@ class FragTrap
 
 	public:
 		FragTrap(void);
-		FragTrap(std::string name);
+		FragTrap(std::string const& name);
 		~FragTrap(void);
 		FragTrap & operator=(FragTrap const & obj);
 
@@ -47,6 +48,7 @@ class FragTrap
 		void 	meleeAttack(std::string const & target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+
 		void	vaulthunter_dot_exe(std::string const & target);
 };
 

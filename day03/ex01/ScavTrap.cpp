@@ -21,6 +21,7 @@ ScavTrap::ScavTrap(void)
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 50;
+    this->_maxEnergyPoints = 50;
 	this->_lvl = 1;
 	this->_name = "noname";
 	this->_meleeAttackDamage = 20;
@@ -29,11 +30,12 @@ ScavTrap::ScavTrap(void)
 	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : _name(name)
+ScavTrap::ScavTrap(std::string const& name) : _name(name)
 {
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 50;
+    this->_maxEnergyPoints = 50;
 	this->_lvl = 1;
 	this->_meleeAttackDamage = 20;
 	this->_rangeAttackDamage = 15;
