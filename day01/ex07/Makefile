@@ -1,6 +1,6 @@
-NAME 	= filestream
+NAME 	= replace
 
-SRCS	= ./main.cpp \
+SRCS	= ./replace.cpp \
 
 OBJS 	= $(SRCS:.cpp=.o)
 
