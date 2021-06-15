@@ -59,14 +59,7 @@ int main(int ac, char **av)
 	{
 		found = buf.find(av[2]);
 		if (found != std::string::npos)
-		{
-			while (i < strlen(av[3]))
-			{
-				buf[found] = av[3][i];
-				found++;
-				i++;
-			}
-		}
+			buf.replace(found, strlen(av[2]), av[3]);
 		if (ifs.eof() != 0)
 			ofs << buf.data();
 		else
