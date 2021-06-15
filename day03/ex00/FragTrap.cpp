@@ -21,6 +21,7 @@ FragTrap::FragTrap(void)
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 100;
+	this->_maxEnergyPoints = 100;
 	this->_lvl = 1;
 	this->_name = "noname";
 	this->_meleeAttackDamage = 30;
@@ -34,6 +35,7 @@ FragTrap::FragTrap(std::string name) : _name(name)
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 100;
+	this->_maxEnergyPoints = 100;
 	this->_lvl = 1;
 	this->_meleeAttackDamage = 30;
 	this->_rangeAttackDamage = 20;
@@ -52,6 +54,7 @@ FragTrap & FragTrap::operator=(FragTrap const & obj)
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
 	this->_lvl = obj._lvl;
 	this->_name = obj._name;
 	this->_meleeAttackDamage = obj._meleeAttackDamage;

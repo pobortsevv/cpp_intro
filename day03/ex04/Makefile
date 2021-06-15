@@ -11,12 +11,12 @@ OBJS 	= $(SRCS:.cpp=.o)
 
 CC 		= clang++
 RM		= rm -rf
-CFLAGS	= -Wall -Werror -Wextra -g
+CFLAGS	= -Wall -Werror -Wextra -g -pedantic
 
 all:
 	@$(MAKE) $(NAME) -j4
 
-%.o:    %.c
+%.o:    %.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS)

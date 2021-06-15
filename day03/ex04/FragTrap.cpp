@@ -60,13 +60,28 @@ void	FragTrap::makeMacaroni(std::string const & target) const
 
 typedef void (FragTrap::*arrFunc)(std::string const & target) const;
 
+void	FragTrap::rangedAttack(std::string const & target) const
+{
+	std::cout << "FR4G-TR4P: " << this->_name << " attacks ";
+	std::cout << target << " at range, causing " << this->_rangeAttackDamage;
+	std::cout << " points of damage!" << std::endl;
+}
+
+void	FragTrap::meleeAttack(std::string const & target) const
+{
+	std::cout << "FR4G-TR4P: " << this->_name << " attacks ";
+	std::cout << target << " at melee, causing " << this->_meleeAttackDamage;
+	std::cout << " points of damage!" << std::endl;
+}
+
 void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
 	if (this->_energyPoints < 25)
 		std::cout << this->_name << " doesn't have enough energy points to execute vaulthunter :(" << std::endl;
 	else
 	{
-		arrFunc funcs[2] = {
+		arrFunc funcs[4] = {
+			&FragTrap::rangedAttack, &FragTrap::meleeAttack,
 			&FragTrap::doFlip, &FragTrap::makeMacaroni
 		};
 

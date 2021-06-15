@@ -20,7 +20,6 @@
 
 int main(void)
 {
-	int i = 5;
 	SuperTrap super1("Shreder");
 
 	super1.meleeAttack("Raphael");

@@ -36,6 +36,8 @@ class FragTrap : virtual public ClapTrap
 		FragTrap & operator=(FragTrap const & obj);
 
 		void	vaulthunter_dot_exe(std::string const & target);
+		virtual void 	rangedAttack(std::string const & target) const;
+		virtual void 	meleeAttack(std::string const & target) const;
 };
 
 #endif

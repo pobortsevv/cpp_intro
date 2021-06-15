@@ -19,7 +19,6 @@
 
 int main(void)
 {
-	int i = 5;
 	FragTrap frag1("Mario");
 	ScavTrap scav2("Serena");
 	NinjaTrap ninja("Donatello");

@@ -58,6 +58,20 @@ void	ScavTrap::talkDirt(std::string const & target) const
 	std::cout << target << " with dirty words! OMG thats awful" << std::endl;
 }
 
+void	ScavTrap::rangedAttack(std::string const & target) const
+{
+	std::cout << "SC4V-TR4P: " << this->_name << " attacks ";
+	std::cout << target << " at range, causing " << this->_rangeAttackDamage;
+	std::cout << " points of damage!" << std::endl;
+}
+
+void	ScavTrap::meleeAttack(std::string const & target) const
+{
+	std::cout << "SC4V-TR4P: " << this->_name << " attacks ";
+	std::cout << target << " at melee, causing " << this->_meleeAttackDamage;
+	std::cout << " points of damage!" << std::endl;
+}
+
 typedef void (ScavTrap::*arrFunc)(std::string const & target) const;
 
 void	ScavTrap::challengeNewcomer(std::string const & target)

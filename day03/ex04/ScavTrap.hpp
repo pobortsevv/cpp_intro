@@ -33,6 +33,8 @@ class ScavTrap : public ClapTrap
 		ScavTrap & operator=(ScavTrap const & obj);
 
 		void	challengeNewcomer(std::string const & target);
+		virtual void 	rangedAttack(std::string const & target) const;
+		virtual void 	meleeAttack(std::string const & target) const;
 };
 
 #endif
