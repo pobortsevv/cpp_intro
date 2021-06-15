@@ -20,7 +20,6 @@ Fixed::Fixed(void)
 	std::cout << "Default constructor called" << std::endl;
 }
 
-
 Fixed::Fixed(int integer) 
 {
 	this->_point = integer << this->_fractBits;
