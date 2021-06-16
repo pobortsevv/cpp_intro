@@ -66,6 +66,8 @@ ScavTrap::ScavTrap(ScavTrap const& obj)
 ScavTrap & ScavTrap::operator=(ScavTrap const & obj)
 {
 	std::cout << "Assignation operator for ScavTrap called" << std::endl;
+	if (this == &obj)
+		return *this;
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;

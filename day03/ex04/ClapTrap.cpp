@@ -120,6 +120,8 @@ int	ClapTrap::getArmor(void) const
 ClapTrap & ClapTrap::operator=(ClapTrap const & obj)
 {
 	std::cout << "Assignation operator for ClapTrap called" << std::endl;
+	if (this == &obj)
+		return *this;
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;

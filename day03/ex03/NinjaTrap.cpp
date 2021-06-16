@@ -39,6 +39,8 @@ NinjaTrap::~NinjaTrap(void)
 NinjaTrap & NinjaTrap::operator=(NinjaTrap const & obj)
 {
 	std::cout << "Assignation operator for NinjaTrap called" << std::endl;
+	if (this == &obj)
+		return *this;
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
