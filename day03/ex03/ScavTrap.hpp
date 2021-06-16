@@ -28,6 +28,7 @@ class ScavTrap : public ClapTrap
 
 	public:
 		ScavTrap(void);
+		ScavTrap(ScavTrap const& obj);
 		ScavTrap(std::string const& name);
 		~ScavTrap(void);
 		ScavTrap & operator=(ScavTrap const & obj);

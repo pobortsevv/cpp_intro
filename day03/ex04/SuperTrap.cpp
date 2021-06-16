@@ -30,6 +30,11 @@ SuperTrap::SuperTrap(void) : ClapTrap("noname"), FragTrap(), NinjaTrap()
 	std::cout << this->_name << " <SuperTrap> was born!" << std::endl;
 }
 
+SuperTrap::SuperTrap(SuperTrap const& obj) : ClapTrap(obj)
+{
+	std::cout << this->_name << " <SuperTrap> was born!" << std::endl;
+}
+
 SuperTrap::SuperTrap(std::string const& name) : ClapTrap(name), FragTrap(), NinjaTrap()
 {
 	this->_hitPoints = this->FragTrap::getHP();

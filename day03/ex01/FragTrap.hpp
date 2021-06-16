@@ -40,7 +40,8 @@ class FragTrap
 
 	public:
 		FragTrap(void);
-		FragTrap(std::string const& name);
+		FragTrap(std::string name);
+		FragTrap(FragTrap const& obj);
 		~FragTrap(void);
 		FragTrap & operator=(FragTrap const & obj);
 

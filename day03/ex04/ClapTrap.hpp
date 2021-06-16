@@ -45,6 +45,7 @@ class ClapTrap
 
 	public:
 		ClapTrap(void);
+		ClapTrap(ClapTrap const& obj);
 		ClapTrap(std::string const& name);
 		ClapTrap(std::string const& name, int hitPoints, int maxHitPoint, int energyPoints, int maxEnergyPoints, int lvl,
 				int meleeAttackDamage,

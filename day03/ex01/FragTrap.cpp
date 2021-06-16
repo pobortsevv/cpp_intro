@@ -30,16 +30,30 @@ FragTrap::FragTrap(void)
 	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string const& name) : _name(name)
+FragTrap::FragTrap(std::string name) : _name(name)
 {
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
 	this->_energyPoints = 100;
-    this->_maxEnergyPoints = 100;
+	this->_maxEnergyPoints = 100;
 	this->_lvl = 1;
 	this->_meleeAttackDamage = 30;
 	this->_rangeAttackDamage = 20;
 	this->_armorDamageReduction = 5;
+	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
+}
+
+FragTrap::FragTrap(FragTrap const& obj)
+{
+	this->_hitPoints = obj._hitPoints;
+	this->_maxHitPoints = obj._maxHitPoints;
+	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
+	this->_lvl = obj._lvl;
+	this->_name = obj._name;
+	this->_meleeAttackDamage = obj._meleeAttackDamage;
+	this->_rangeAttackDamage = obj._rangeAttackDamage;
+	this->_armorDamageReduction = obj._armorDamageReduction;
 	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
 }
 
@@ -51,10 +65,12 @@ FragTrap::~FragTrap(void)
 FragTrap & FragTrap::operator=(FragTrap const & obj)
 {
 	std::cout << "Assignation operator for FragTrap called" << std::endl;
+	if (this == &obj)
+		return *this;
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;
-    this->_maxEnergyPoints = obj._maxEnergyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
 	this->_lvl = obj._lvl;
 	this->_name = obj._name;
 	this->_meleeAttackDamage = obj._meleeAttackDamage;
@@ -79,7 +95,7 @@ void	FragTrap::meleeAttack(std::string const & target)
 
 void	FragTrap::takeDamage(unsigned int amount)
 {
-	if (this->_hitPoints - amount <= 0)
+	if (this->_hitPoints - (int)amount <= 0)
 	{
 		std::cout << this->_name << " died!" << std::endl;
 		this->_hitPoints = 0;
@@ -89,7 +105,7 @@ void	FragTrap::takeDamage(unsigned int amount)
 		std::cout << this->_name << " got " << amount << " damage!";
 		std::cout << std::endl;
 		if (amount - this->_armorDamageReduction > 0)
-			this->_hitPoints -= (amount - this->_armorDamageReduction);
+			this->_hitPoints -= ((int)amount - this->_armorDamageReduction);
 	}
 }
 

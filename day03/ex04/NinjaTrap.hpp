@@ -33,6 +33,7 @@ class NinjaTrap : virtual public ClapTrap
 
 	public:
 		NinjaTrap(void);
+		NinjaTrap(NinjaTrap const& obj);
 		NinjaTrap(std::string const& name);
 		~NinjaTrap(void);
 		NinjaTrap & operator=(NinjaTrap const & obj);

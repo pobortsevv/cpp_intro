@@ -43,6 +43,20 @@ FragTrap::FragTrap(std::string name) : _name(name)
 	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
 }
 
+FragTrap::FragTrap(FragTrap const& obj)
+{
+	this->_hitPoints = obj._hitPoints;
+	this->_maxHitPoints = obj._maxHitPoints;
+	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
+	this->_lvl = obj._lvl;
+	this->_name = obj._name;
+	this->_meleeAttackDamage = obj._meleeAttackDamage;
+	this->_rangeAttackDamage = obj._rangeAttackDamage;
+	this->_armorDamageReduction = obj._armorDamageReduction;
+	std::cout << this->_name << " <FragTrap> was born!" << std::endl;
+}
+
 FragTrap::~FragTrap(void)
 {
 	std::cout << this->_name << " <FragTrap> died by destructor!" << std::endl;
@@ -51,6 +65,8 @@ FragTrap::~FragTrap(void)
 FragTrap & FragTrap::operator=(FragTrap const & obj)
 {
 	std::cout << "Assignation operator for FragTrap called" << std::endl;
+	if (this == &obj)
+		return *this;
 	this->_hitPoints = obj._hitPoints;
 	this->_maxHitPoints = obj._maxHitPoints;
 	this->_energyPoints = obj._energyPoints;

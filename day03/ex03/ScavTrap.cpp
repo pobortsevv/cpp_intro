@@ -21,6 +21,11 @@ ScavTrap::ScavTrap(void) : ClapTrap("noname", 100, 100, 50, 50, 1, 20, 15, 3)
 	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
 }
 
+ScavTrap::ScavTrap(ScavTrap const& obj) : ClapTrap(obj)
+{
+	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string const& name) : ClapTrap(name, 100, 100, 50, 50, 1, 20, 15, 3)
 {
 	std::cout << this->_name << " <ScavTrap> was born!" << std::endl;

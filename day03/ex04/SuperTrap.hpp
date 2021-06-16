@@ -36,6 +36,7 @@ class SuperTrap : virtual public FragTrap, virtual public NinjaTrap
 
 	public:
 		SuperTrap(void);
+		SuperTrap(SuperTrap const& obj);
 		SuperTrap(std::string const& name);
 		~SuperTrap(void);
 		SuperTrap & operator=(SuperTrap const & obj);

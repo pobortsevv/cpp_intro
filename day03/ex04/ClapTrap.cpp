@@ -30,6 +30,20 @@ ClapTrap::ClapTrap(void)
 	std::cout << this->_name << " <ClapTrap> was born!" << std::endl;
 }
 
+ClapTrap::ClapTrap(ClapTrap const& obj)
+{
+	this->_hitPoints = obj._hitPoints;
+	this->_maxHitPoints = obj._maxHitPoints;
+	this->_energyPoints = obj._energyPoints;
+	this->_maxEnergyPoints = obj._maxEnergyPoints;
+	this->_lvl = obj._lvl;
+	this->_name = obj._name;
+	this->_meleeAttackDamage = obj._meleeAttackDamage;
+	this->_rangeAttackDamage = obj._rangeAttackDamage;
+	this->_armorDamageReduction = obj._armorDamageReduction;
+	std::cout << this->_name << " <ClapTrap> was born!" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string const& name) : _name(name)
 {
 	this->_hitPoints = 100;

@@ -21,6 +21,11 @@ NinjaTrap::NinjaTrap(void) : ClapTrap("noname", 60, 60, 120, 120, 1, 60, 5, 0)
 	std::cout << this->_name << " <NinjaTrap> was born!" << std::endl;
 }
 
+NinjaTrap::NinjaTrap(NinjaTrap const& obj) : ClapTrap(obj)
+{
+	std::cout << this->_name << " <NinjaTrap> was born!" << std::endl;
+}
+
 NinjaTrap::NinjaTrap(std::string const& name) : ClapTrap(name, 60, 60, 120, 120, 1, 60, 5, 0)
 {
 	std::cout << this->_name << " <NinjaTrap> was born!" << std::endl;

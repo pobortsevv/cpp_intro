@@ -31,6 +31,7 @@ class FragTrap : public ClapTrap
 
 	public:
 		FragTrap(void);
+		FragTrap(FragTrap const& obj);
 		FragTrap(std::string const& name);
 		~FragTrap(void);
 		FragTrap & operator=(FragTrap const & obj);
