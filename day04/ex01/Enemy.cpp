@@ -14,26 +14,42 @@
 
 #include "Enemy.hpp"
 
-AWeapon::AWeapon(void) : _name("deafult"), _apcost(0), _damage(0)
+Enemy::Enemy(void) : _hp(100), _type("default")
 {}
 
-AWeapon::AWeapon(std::string const& name, int apcost, int damage) : 
-	_name(name), _apcost(apcost), _damage(damage)
+Enemy::Enemy(int hp, std::string const& type) : 
+	_hp(hp), _type(type)
 {}
 
-AWeapon::AWeapon(AWeapon const & obj) : _name(obj.getName()),
-	_apcost(obj.getAPCost()), _damage(obj.getDamage())
+Enemy::Enemy(Enemy const & obj) : _hp(obj.getHP()),
+	_type(obj.getType())
 {}
 
-AWeapon::~AWeapon(void)
+Enemy::~Enemy(void)
 {}
 
-AWeapon & AWeapon::operator=(AWeapon const& obj)
+Enemy & Enemy::operator=(Enemy const& obj)
 {
 	if (this == &obj)
 		return *this;
-	this->_name = obj.getName();
-	this->_apcost = obj.getAPCost();
-	this->_damage = obj.getDamage();
+	this->_type = obj.getType();
+	this->_hp = obj.getHP();
+
 	return *this;
+}
+
+std::string const & Enemy::getType(void) const
+{
+	return this->_type;
+}
+
+int Enemy::getHP(void) const
+{
+	return this->_hp;
+}
+
+void	Enemy::takeDamage(int damage)
+{
+	if (damage >= 0)
+		this->_hp = this->_hp - damage >= 0 ? this->_hp - damage : 0;
 }
