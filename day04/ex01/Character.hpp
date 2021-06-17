@@ -34,7 +34,7 @@ class Character
 		Character(void);
 		Character(Character const & obj);
 		Character(std::string const & name);
-		~Character(void);
+		virtual ~Character(void);
 
 		std::string const & getName(void) const;
 		int getAP(void) const;

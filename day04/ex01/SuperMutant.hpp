@@ -22,7 +22,7 @@ class SuperMutant : public Enemy
 	public:
 		SuperMutant(void);
 		SuperMutant(SuperMutant const & obj);
-		~SuperMutant(void);
+		virtual ~SuperMutant(void);
 
 		void takeDamage(int damage);
 };

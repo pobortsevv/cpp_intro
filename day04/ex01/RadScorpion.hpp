@@ -22,7 +22,7 @@ class RadScorpion : public Enemy
 	public:
 		RadScorpion(void);
 		RadScorpion(RadScorpion const & obj);
-		~RadScorpion(void);
+		virtual ~RadScorpion(void);
 
 		void takeDamage(int damage);
 };
