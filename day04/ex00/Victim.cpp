@@ -21,7 +21,7 @@ Victim::Victim(std::string name) :  _name(name)
 
 Victim::Victim(Victim const& obj)
 {
-	*this = obj;
+	this->_name = obj.getName();
 	std::cout << "Some random victim called " << this->_name << " just appeared!" << std::endl;
 }
 
@@ -37,6 +37,8 @@ std::string Victim::getName(void) const
 
 Victim & Victim::operator=(Victim const& obj)
 {
+	if (this == &obj)
+		return *this;
 	this->_name = obj.getName();	
 	return *this;
 }

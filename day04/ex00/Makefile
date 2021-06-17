@@ -4,6 +4,7 @@ SRCS	= ./main.cpp \
 		  ./Victim.cpp \
 		  ./Sorcerer.cpp \
 		  ./Peon.cpp \
+		  ./Goblin.cpp \
 
 OBJS 	= $(SRCS:.cpp=.o)
 

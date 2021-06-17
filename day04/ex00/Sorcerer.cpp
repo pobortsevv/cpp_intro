@@ -16,18 +16,19 @@
 
 Sorcerer::Sorcerer(std::string name, std::string title) : _name(name), _title(title)
 {
-	std::cout << this->_name << " ," << this->_title << ", is born!" << std::endl;
+	std::cout << this->_name << ", " << this->_title << ", is born!" << std::endl;
 }
 
 Sorcerer::Sorcerer(Sorcerer const& obj)
 {
-	*this = obj;
-	std::cout << this->_name << " ," << this->_title << ", is born!" << std::endl;
+	this->_name = obj.getName();
+	this->_title = obj.getTitle();
+	std::cout << this->_name << ", " << this->_title << ", is born!" << std::endl;
 }
 
 Sorcerer::~Sorcerer(void)
 {
-	std::cout << this->_name << " ," << this->_title << ", is dead. Consequences will never be the same!" << std::endl;
+	std::cout << this->_name << ", " << this->_title << ", is dead. Consequences will never be the same!" << std::endl;
 }
 
 std::string Sorcerer::getName(void) const
@@ -42,6 +43,8 @@ std::string Sorcerer::getTitle(void) const
 
 Sorcerer & Sorcerer::operator=(Sorcerer const& obj)
 {
+	if (this == &obj)
+		return *this;
 	this->_name = obj.getName();	
 	this->_title = obj.getTitle();
 	return *this;

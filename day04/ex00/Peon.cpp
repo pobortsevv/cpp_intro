@@ -31,6 +31,8 @@ Peon::~Peon(void)
 
 Peon & Peon::operator=(Peon const& obj)
 {
+	if (this == &obj)
+		return *this;
 	this->_name = obj.getName();	
 	return *this;
 }
