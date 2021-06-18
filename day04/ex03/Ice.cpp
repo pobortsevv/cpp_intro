@@ -14,10 +14,7 @@
 
 #include "Ice.hpp"
 
-Ice::Ice(void) : AMateria()
-{}
-
-Ice::Ice(std::string const & type) : AMateria(type)
+Ice::Ice(void) : AMateria("ice")
 {}
 
 Ice::Ice(Ice const & obj) : AMateria(obj)
@@ -26,7 +23,13 @@ Ice::Ice(Ice const & obj) : AMateria(obj)
 Ice::~Ice(void)
 {}
 
+Ice *Ice::clone(void) const
+{
+	return (new Ice(*this));
+}
+
 void	Ice::use(ICharacter & target)
 {
-	std::cout << target.getName() << " used unknown materia!" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	increaseXP();
 }

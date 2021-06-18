@@ -41,9 +41,14 @@ std::string const & AMateria::getType(void) const
 	return this->_type;
 }
 
-int AMateria::getXP(void) const
+unsigned int AMateria::getXP(void) const
 {
 	return this->_xp;
+}
+
+void	AMateria::increaseXP(void)
+{
+	this->_xp += 10;
 }
 
 void	AMateria::use(ICharacter & target)

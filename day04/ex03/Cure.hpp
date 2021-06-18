@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  Ice.hpp
+ *       Filename:  Cure.hpp
  *
  *        Version:  1.0
  *        Created:  06/17/2021 18:33:21
@@ -12,19 +12,19 @@
  * ===================================================================
  */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
 # include "AMateria.hpp"
 
-class Ice : public AMateria
+class Cure : public AMateria
 {
 	public:
-		Ice(void);
-		Ice(Ice const & obj);
-		virtual ~Ice();
+		Cure(void);
+		Cure(Cure const & obj);
+		virtual ~Cure();
 
-		Ice* clone() const;
+		Cure* clone() const;
 		void use(ICharacter& target);
 };
 

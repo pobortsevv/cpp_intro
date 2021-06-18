@@ -15,8 +15,9 @@
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
-# include <iostream>
 # include <string>
+# include <cstdint>
+
 # include "ICharacter.hpp"
 
 class AMateria
@@ -29,14 +30,15 @@ class AMateria
 		AMateria(void);
 		AMateria(std::string const & type);
 		AMateria(AMateria const & obj);
-		virtual ~AMateria();
+		virtual ~AMateria(void);
 
 		AMateria & operator=(AMateria const & obj);
 
-		std::string const & getType() const; //Returns the materia type
-		unsigned int getXP() const; //Returns the Materia's XP
+		std::string const & getType(void) const; //Returns the materia type
+		unsigned int getXP(void) const; //Returns the Materia's XP
+		void increaseXP(void);
 
-		virtual AMateria* clone() const = 0;
+		virtual AMateria* clone(void) const = 0;
 		virtual void use(ICharacter& target);
 };
 
