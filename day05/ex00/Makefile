@@ -1,15 +1,7 @@
-NAME 	= wasteland
+NAME 	= bureaucrat
 
 SRCS	= ./main.cpp \
-		  ./AWeapon.cpp \
-		  ./PlasmaRifle.cpp \
-		  ./DesertEagle.cpp \
-		  ./PowerFist.cpp \
-		  ./Enemy.cpp \
-		  ./SuperMutant.cpp \
-		  ./RadScorpion.cpp \
-		  ./WhiteWalker.cpp \
-		  ./Character.cpp \
+		  ./Bureaucrat.cpp \
 
 OBJS 	= $(SRCS:.cpp=.o)
 

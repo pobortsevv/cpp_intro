@@ -15,8 +15,10 @@
 #include "Character.hpp"
 #include "Enemy.hpp"
 #include "PlasmaRifle.hpp"
+#include "DesertEagle.hpp"
 #include "PowerFist.hpp"
 #include "RadScorpion.hpp"
+#include "WhiteWalker.hpp"
 #include "SuperMutant.hpp"
 
 int main(void)
@@ -49,14 +51,14 @@ int main(void)
 	Character batman("Batman");
 	std::cout << batman;
 
-	Enemy *crok = new SuperMutant();
-	PowerFist *fist = new PowerFist();
+	Enemy *hodok = new WhiteWalker();
+	AWeapon *eagle = new DesertEagle();
 
-	batman.equip(fist);
-	while (crok->getHP() - fist->getDamage() >= 0)
+	batman.equip(eagle);
+	while (hodok->getHP() - eagle->getDamage() >= 0)
 	{
 		std::cout << batman;
-		batman.attack(crok);
+		batman.attack(hodok);
 	}
 	std::cout << batman;
 	batman.recoverAP();
@@ -67,8 +69,8 @@ int main(void)
 	std::cout << batman;
 	batman.recoverAP();
 	std::cout << batman;
-	delete crok;
-	delete fist;
+	delete hodok;
+	delete eagle;
 
 	return 0;
 }
