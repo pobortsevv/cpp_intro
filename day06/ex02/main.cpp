@@ -65,7 +65,7 @@ void identify_from_pointer(Base * p)
 void identify_from_reference( Base & p)
 {
 	
-	std::cout << "\nIdentification from pointer:" << std::endl;
+	std::cout << "\nIdentification from reference:" << std::endl;
 
 	if (dynamic_cast<A *>(&p))
 		std::cout << "This is A class" << std::endl;
