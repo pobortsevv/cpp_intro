@@ -25,8 +25,8 @@ int main(void)
     Form        *tree = new ShrubberyCreationForm("tree");
 
     std::cout << *tree << tom << bob;
-    tom.signForm(*tree);
-    bob.signForm(*tree);
+    tom.executeForm(*tree);
+    bob.executeForm(*tree);
     std::cout << *tree << std::endl << std::endl;
 
     RobotomyRequestForm     *r_form = new RobotomyRequestForm("Cop");
