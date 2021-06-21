@@ -55,7 +55,6 @@ Data * deserialize(void * raw)
 {
 	Data *des = new Data;
 
-	std::cout << sizeof(*raw);
 	des->str1 = *reinterpret_cast<std::string **>(raw);
 	raw = reinterpret_cast<void **>(raw) + 1;
 	des->number = *reinterpret_cast<int *>(raw);
