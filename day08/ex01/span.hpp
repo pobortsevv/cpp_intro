@@ -17,11 +17,13 @@
 
 # include <iostream>
 # include <algorithm>
+# include <vector>
+# include <cstdlib>
 
 class Span
 {
 	private:
-		unsigned int _size;
+		unsigned int _max_size;
 		std::vector<int> _arr;
 	
 	public:
@@ -31,15 +33,23 @@ class Span
 		~Span(void);
 		
 		Span const & operator=(Span const& obj);
-		unsigned int size(void) const;
+		unsigned int _size(void) const;
+		unsigned int max_size(void) const;
 
 		void addNumber(int number);
-		void shortestSpan(void) const;
-		void longestSpan(void) const;
+		void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+		int shortestSpan(void) const;
+		int longestSpan(void) const;
 
-		int &operator[](int index) const;
+		int operator[](int index) const;
 
 		class FullArr: public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
+		class NoSpanToFind: public std::exception
 		{
 			public:
 				virtual const char* what() const throw();
